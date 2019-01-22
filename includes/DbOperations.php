@@ -86,6 +86,7 @@ public function getUserByEmail($email){
     $stmt->execute();
     $stmt->bind_result($id, $email, $name, $school);
     $stmt->fetch();
+    $user = array();
     $user['id'] = $id;
     $user['email'] = $email;
     $user['name'] = $name;

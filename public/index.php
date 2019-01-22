@@ -104,7 +104,7 @@ $app->post('/userlogin', function(Request $request, Response $response){
             
             $response_data['error'] = false;
             $response_data['message'] = 'Login Successful';
-            $reposnse_data['user'] = $user;
+            $response_data['user'] = $user;
 
             $response->write(json_encode($response_data));
 
@@ -137,8 +137,8 @@ $app->post('/userlogin', function(Request $request, Response $response){
 
             $response->write(json_encode($response_data));
 
-            return $reponse
-                ->withHeader('Content-type' , 'application/json')
+            return $response
+            ->withHeader('Content-type' , 'application/json')
                 ->withStatus(200);
 
 
